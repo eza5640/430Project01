@@ -53,8 +53,8 @@ const addPost = (request, response, params) => {
     }
   
     //add or update fields for this user name
-    currentPosts[body.title].title = body.title;
-    currentPosts[body.title].description = body.description;
+    currentPosts[params.title].title = params.title;
+    currentPosts[params.title].description = params.description;
   
     //if response is created, then set our created message
     //and sent response with a message
