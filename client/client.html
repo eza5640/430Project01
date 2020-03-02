@@ -7,8 +7,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   <script type="text/babel">
     let fileForm = null;
-    const titleForm;
-    const userForm;
     const handleResponse = (xhr, parseResponse) => {
       const content = document.querySelector('#content');
       const posts = document.querySelector('#news');
@@ -110,8 +108,8 @@
     }
 
     const init = () => {
-      userForm = document.querySelector('#userForm');
-      titleForm = document.querySelector('#titleForm');
+      let userForm = document.querySelector('#userForm');
+      let titleForm = document.querySelector('#titleForm');
       console.log(titleForm);
       const getPosts = (e) => requestUpdate(e, userForm);
       const addUser = (e) => requestAdd(e, titleForm);
