@@ -41,7 +41,7 @@
         }
         for(let currPost in currPosts) {
           console.log(currPost);
-          posts.innerHTML += `<h5>${currPost.title}: ${currPost.description}</h5>`;
+          posts.innerHTML += `<h5>${currPosts[currPost].title}: ${currPosts[currPost].description}</h5>`;
         }
 
         //content.innerHTML += `<p>${xhr.response}</p>`;
