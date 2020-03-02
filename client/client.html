@@ -35,7 +35,7 @@
       if(parseResponse) {
         const obj = JSON.parse(xhr.response);
         console.log(obj);
-        for(let i = 0; i < Object.keys(obj).length; i++)
+        for(let i = 0; i < Object.keys(obj[currentPosts]).length; i++)
         {
           posts.innerHTML += `<h5>${obj.title}: ${obj.description}</h5>`;
         }
