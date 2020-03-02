@@ -40,7 +40,7 @@
         // {
         //   posts.innerHTML += `<h5>${currPosts.title}: ${currPosts.description}</h5>`;
         // }
-        for(let i of Object.keys(currPosts)) {
+        for(let i in Object.keys(currPosts)) {
             posts.innerHTML += `<h5>${currPosts.title}: ${currPosts.description}</h5>`;
         }
         //content.innerHTML += `<p>${xhr.response}</p>`;
