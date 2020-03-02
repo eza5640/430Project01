@@ -46,8 +46,8 @@
     };
 
     const requestUpdate = (e, userForm) => {
-      const url = userForm.action;
-      const method = userForm.querySelector('#methodSelect').value;
+      const url = e.target.action;
+      const method = e.target.querySelector('#methodSelect').value;
       console.log("In requestupdate, going to url: " + url);
       const xhr = new XMLHttpRequest();
       xhr.open(method, url);
