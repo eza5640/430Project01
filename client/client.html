@@ -68,11 +68,6 @@
        //prevent the browser's default action (to send the form on its own)
        e.preventDefault();
       
-      //grab the forms action (url to go to)
-      //and method (HTTP method - POST in this case)
-      const nameAction = titleForm.getAttribute('action');
-      
-      
       //grab the form's name and age fields so we can check user input
       const titleField = titleForm.querySelector('#titleField');
       const descriptionField = titleForm.querySelector('#descriptionField');
@@ -80,7 +75,7 @@
       //create a new Ajax request (remember this is asynchronous)
       const xhr = new XMLHttpRequest();
       //set the method (POST) and url (action field from form)
-      xhr.open('POST', nameAction);
+      xhr.open('POST', '/addPost');
       
       //set our request type to x-www-form-urlencoded
       //which is one of the common types of form data. 
