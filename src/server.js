@@ -44,7 +44,7 @@ const onRequest = (request, response) => {
   if (request.method === 'POST') {
     handlePost(request, response, parsedUrl);
   }
-  if (urlStruct[parsedUrl.pathname]) {
+  else if (urlStruct[parsedUrl.pathname]) {
     urlStruct[parsedUrl.pathname](request, response);
   } else {
     urlStruct.notFound(request, response);
