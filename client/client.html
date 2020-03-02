@@ -109,10 +109,11 @@
 
     const init = () => {
       let userForm = document.querySelector('#userForm');
-      let titleForm = document.querySelector('#titleForm');
-      console.log(titleForm);
       const getPosts = (e) => requestUpdate(e, userForm);
+
+      let titleForm = document.querySelector('#titleForm');
       const addUser = (e) => requestAdd(e, titleForm);
+      
       titleForm.addEventListener('submit', requestAdd);
       userForm.addEventListener('submit', requestUpdate);
     };
