@@ -40,7 +40,7 @@
         {
            //posts.innerHTML += `<h5>${currPosts.title}: ${currPosts.description}</h5>`;
         }
-        for(let currPost of currPosts) {
+        for(let currPost in currPosts) {
           posts.innerHTML += `<h5>${currPost.title}: ${currPost.description}</h5>`;
         }
 
