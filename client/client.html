@@ -35,12 +35,12 @@
       if(parseResponse) {
         const obj = JSON.parse(xhr.response);
         const currPosts = obj.currentPosts;
-        console.log(Object.keys(currPosts));
         for(let i = 0; i < Object.keys(currPosts).length; i++)
         {
            //posts.innerHTML += `<h5>${currPosts.title}: ${currPosts.description}</h5>`;
         }
         for(let currPost in currPosts) {
+          console.log(currPost);
           posts.innerHTML += `<h5>${currPost.title}: ${currPost.description}</h5>`;
         }
 
