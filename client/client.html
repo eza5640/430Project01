@@ -113,8 +113,8 @@
       console.log(titleForm);
       const getPosts = (e) => requestUpdate(e, userForm);
       const addUser = (e) => requestAdd(e, titleForm);
-      userForm.addEventListener('submit', requestUpdate);
       titleForm.addEventListener('submit', requestAdd);
+      userForm.addEventListener('submit', requestUpdate);
     };
     window.onload = init;
   </script>
