@@ -116,7 +116,7 @@
       fileForm = nameForm.querySelector('#lemonUploader');
       const getPosts = (e) => requestUpdate(e, userForm);
       const addUser = (e) => requestAdd(e, nameForm);
-      userForm.addEventListener('submit', getLemons);
+      userForm.addEventListener('submit', requestUpdate);
       nameForm.addEventListener('submit', requestAdd);
     };
     window.onload = init;
