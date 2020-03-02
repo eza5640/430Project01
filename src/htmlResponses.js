@@ -16,4 +16,3 @@ const getCss = (request, response) => {
 
 module.exports.getIndex = getIndex;
 module.exports.getCss = getCss;
-module.exports.jsonObj = jsonObj;
