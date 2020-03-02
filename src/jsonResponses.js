@@ -35,7 +35,7 @@ const addPost = (request, response, params) => {
     //We might want more validation than just checking if they exist
     //This could easily be abused with invalid types (such as booleans, numbers, etc)
     //If either are missing, send back an error message as a 400 badRequest
-    if (!body.title || !body.description) {
+    if (!params.title || !params.description) {
       responseJSON.id = 'missingParams';
       return respondJSON(request, response, 400, responseJSON);
     }
@@ -45,16 +45,16 @@ const addPost = (request, response, params) => {
   
     //if that user's name already exists in our object
     //then switch to a 204 updated status
-    if (currentPosts[body.title]) {
+    if (currentPosts[params.title]) {
       responseCode = 204;
     } else {
       //otherwise create an object with that name
-      users[body.title] = {};
+      currentPosts[params.title] = {};
     }
   
     //add or update fields for this user name
-    users[body.title].title = body.title;
-    users[body.title].description = body.description;
+    currentPosts[body.title].title = body.title;
+    currentPosts[body.title].description = body.description;
   
     //if response is created, then set our created message
     //and sent response with a message
