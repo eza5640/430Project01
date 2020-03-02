@@ -71,7 +71,7 @@
       //grab the forms action (url to go to)
       //and method (HTTP method - POST in this case)
       const nameAction = titleForm.getAttribute('action');
-      const nameMethod = titleForm.getAttribute('method');
+      
       
       //grab the form's name and age fields so we can check user input
       const titleField = titleForm.querySelector('#titleField');
@@ -80,7 +80,7 @@
       //create a new Ajax request (remember this is asynchronous)
       const xhr = new XMLHttpRequest();
       //set the method (POST) and url (action field from form)
-      xhr.open(nameMethod, nameAction);
+      xhr.open('POST', nameAction);
       
       //set our request type to x-www-form-urlencoded
       //which is one of the common types of form data. 
@@ -113,7 +113,6 @@
     const init = () => {
       const userForm = document.querySelector('#userForm');
       const nameForm = document.querySelector('#titleForm');
-      fileForm = nameForm.querySelector('#lemonUploader');
       const getPosts = (e) => requestUpdate(e, userForm);
       const addUser = (e) => requestAdd(e, nameForm);
       userForm.addEventListener('submit', requestUpdate);
