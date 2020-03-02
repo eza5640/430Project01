@@ -3,7 +3,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  background-color: rgba(15, 15, 15, 0.438);
 }
 
 #top {
@@ -23,12 +23,12 @@ html, body {
 
 h3{
   text-align: center;
-  background-color: rgb(184, 173, 11);
+  background-color: rgba(5, 5, 5, 0.123);
 }
 
 #lemons{
   text-align: center;
-  background-color: rgba(255, 255, 0, 0.418);
+  background-color: rgb(56, 56, 55);
   width: 90%;
   margin-left: 5%;
   height: 100%;
