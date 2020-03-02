@@ -68,7 +68,7 @@
        //prevent the browser's default action (to send the form on its own)
        e.preventDefault();
       
-      console.log(titleForm);
+      console.log(e.this);
 
       //grab the form's name and age fields so we can check user input
       const titleField = titleForm.querySelector('#titleField');
@@ -113,7 +113,7 @@
 
       let titleForm = document.querySelector('#titleForm');
       const addUser = (e) => requestAdd(e, titleForm);
-      
+
       titleForm.addEventListener('submit', requestAdd);
       userForm.addEventListener('submit', requestUpdate);
     };
