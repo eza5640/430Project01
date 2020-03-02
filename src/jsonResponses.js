@@ -2,21 +2,21 @@
 const currentPosts = {};
 
 const respondJSON = (request, response, status, object) => {
-  response.writeHead(status, { 'Content-Type': 'application/json' });
-  response.write(JSON.stringify(object));
-  response.end();
+	response.writeHead(status, { 'Content-Type': 'application/json' });
+	response.write(JSON.stringify(object));
+	response.end();
 };
 const respondJSONMeta = (request, response, status) => {
-  response.writeHead(status, { 'Content-Type': 'application/json' });
-  response.end();
+	response.writeHead(status, { 'Content-Type': 'application/json' });
+	response.end();
 };
 
 const getPosts = (request, response) => {
-  const responseJSON = {
-    currentPosts,
-  };
+	const responseJSON = {
+		currentPosts,
+	};
 
-  return respondJSON(request, response, 200, responseJSON);
+	return respondJSON(request, response, 200, responseJSON);
 };
 
 const getPostsMeta = (request, response) => respondJSONMeta(request, response, 200);
@@ -69,6 +69,14 @@ const addPost = (request, response, params) => {
 };
 
 const notFoundMeta = (request, response) => respondJSONMeta(request, response, 404);
+
+const notFound = (request, response) => {
+	const responseJSON = {
+		message: 'Error: Page not found.'
+	};
+
+	return respondJSON(request, response, 404, responseJSON);
+};
 
 module.exports = {
   addPost,
