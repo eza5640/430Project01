@@ -67,12 +67,10 @@
     const requestAdd = (e, titleForm) => {
        //prevent the browser's default action (to send the form on its own)
        e.preventDefault();
-      
-      console.log(e.target);
 
       //grab the form's name and age fields so we can check user input
-      const titleField = titleForm.querySelector('#titleField');
-      const descriptionField = titleForm.querySelector('#descriptionField');
+      const titleField = e.target.querySelector('#titleField');
+      const descriptionField = e.target.querySelector('#descriptionField');
       
       //create a new Ajax request (remember this is asynchronous)
       const xhr = new XMLHttpRequest();
