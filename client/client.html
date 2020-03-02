@@ -52,11 +52,7 @@
       const xhr = new XMLHttpRequest();
       xhr.open(method, url);
       xhr.setRequestHeader('Accept', 'application/json');
-      if(method == 'GET') {
-        xhr.onload = () => handleResponse(xhr, true);
-      } else {
-        xhr.onload = () => handleResponse(xhr, false);
-      }
+      xhr.onload = () => handleResponse(xhr, true);
       
       xhr.send();
       
