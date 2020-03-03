@@ -57,7 +57,14 @@
       const xhr = new XMLHttpRequest();
       xhr.open(method, url);
       xhr.setRequestHeader('Accept', 'application/json');
-      xhr.onload = () => handleResponse(xhr, true);
+      if(method === 'HEAD' || method === 'head')
+      {
+        xhr.onload = () => handleResponse(xhr, false);
+      }
+      else if(method === 'GET' || method === 'get')
+      {
+        xhr.onload = () => handleResponse(xhr, true);
+      }
       
       xhr.send();
       
