@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: rgba(15, 15, 15, 0.438);
+  font-family: arial;
 }
 
 #top {
@@ -16,7 +17,11 @@ html, body {
 }
 
 #content {
-  margin-top: 100px;
+  margin-top: 5%;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 2%;
+  border-bottom: 1px solid black;
   font-size: 2em;
   text-align: center;
 }
@@ -36,11 +41,46 @@ h3{
   border: 1px solid black;
   border-radius: 25px;
   box-shadow: 1px 1px 6px 2px black;
+  overflow: auto;
 }
 
 div {
   text-align: left;
-  width: 30%;
+  width: 25%;
   border: 1px solid black;
   box-shadow: 1px 1px 2px 2px black;
+  float: left;
+  margin: 2%;
+  min-height: 200px;
+  max-height: 200px;
+  overflow: overlay;
+}
+div::-webkit-scrollbar {
+  display: none;
+}
+#news::-webkit-scrollbar {
+  display: none;
+}
+
+div h4 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0%;
+  border-bottom: 1px solid black;
+  padding: 2%;
+}
+
+div p{
+  padding-left: 4%;
+  margin-top: -5%;
+  font-family: arial;
+}
+
+.titlelabel{
+  margin-left: 0%;
+}
+.titleinput {
+  width: 25%;
+  margin-right: 0%;
+  margin-left: %;
 }

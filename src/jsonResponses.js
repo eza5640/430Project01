@@ -1,4 +1,3 @@
-//should be in a db
 const currentPosts = {};
 
 const respondJSON = (request, response, status, object) => {
@@ -20,10 +19,6 @@ const getPosts = (request, response) => {
 };
 
 const getPostsMeta = (request, response) => respondJSONMeta(request, response, 200);
-
-const getPost = (request, response, params) => {
-    //does nothing yet
-};
 
 const addPost = (request, response, params) => {
     //default json message
@@ -80,7 +75,6 @@ const notFound = (request, response) => {
 
 module.exports = {
   addPost,
-  getPost,
   notFound,
   getPosts,
   getPostsMeta,
